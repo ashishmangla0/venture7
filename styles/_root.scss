@@ -1,0 +1,14 @@
+:root{
+    @each $brandColor, $value in $brandColors{
+        --venture-#{$brandColor}:#{$value};
+    }
+    @each $fontWeigh, $value in $fontWeights{
+        --font-weight-#{$fontWeigh}:#{$value};
+    }
+    @each $shadow, $value in $shadows{
+        --venture-#{$shadow}:#{$value};
+    }
+ 
+    --venture-body-color : #{$text};
+    --venture-body-font-size : #{$base};
+}

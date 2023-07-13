@@ -1,0 +1,28 @@
+$font-weight:(
+    'thin' : var(--font-weight-100),
+    'extralight' : var(--font-weight-200),
+    'light' : var(--font-weight-300),
+    'regular' : var(--font-weight-400),
+    'medium' : var(--font-weight-500),
+    'semibold' : var(--font-weight-600)
+);
+
+$font-size:(
+    'base' : var(--venture-body-font-size)
+);
+
+$line-height:(
+    'base' : var(--venture-body-font-size)
+);
+
+
+@each $font, $value in $font-weight{
+    %font-weight-#{$font}{
+        font-weight:#{$value};
+    }
+}
+@each $font, $value in $font-size{
+    %font-size-#{$font}{
+        font-size:#{$value};
+    }
+}
