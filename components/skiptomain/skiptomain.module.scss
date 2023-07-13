@@ -1,0 +1,12 @@
+@import '@/styles/placeholders';
+.skipnav{
+    @extend %font-weight-semibold;
+    z-index: 100;
+    position: absolute;
+top: - 48px;
+left: 0;
+    &:focus{
+        top: 0;
+       
+    }
+}
