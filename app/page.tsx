@@ -92,7 +92,7 @@ export default function Home() {
         </a>
       </div>
 
-      <CardCase/>
+      <CardCase cardWrapperClass="sdasddd"/>
     </main>
   )
 }

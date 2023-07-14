@@ -4,7 +4,7 @@ import Image from 'next/image'
 import cardCaseStyle from './cardcase.module.scss'
 
 const CardCase = (props) => {
-    const { cardWrapperClass } = props
+    const { cardWrapperClass="" } = props
     return (
         <article className={`${cardCaseStyle.card} ${cardWrapperClass}`}>
             <div className={`${cardCaseStyle.card__img}`}>
