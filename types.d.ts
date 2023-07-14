@@ -8,5 +8,10 @@ type CardCaseProps = {
     height ?: number, 
     width ?: number
   };
+  type SkipToMainProps = {
+    sectionId : string,
+    content : string
+    customClass ?: string
+  };
   
-  export {CardCaseProps,LogoProps};
+  export {CardCaseProps,LogoProps,SkipToMainProps};
