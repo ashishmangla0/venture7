@@ -1,5 +1,6 @@
-import Image from "next/image"
-const Logo = (props) => {
+import Image from "next/image";
+import { LogoProps } from "@/types";
+const Logo = (props:LogoProps) => {
     const { logoClass,height, width } = props
     return (
         <Image 
