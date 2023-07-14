@@ -3,7 +3,11 @@
 import Image from 'next/image'
 import cardCaseStyle from './cardcase.module.scss'
 
-const CardCase = (props) => {
+type cardcaseProps = {
+    cardWrapperClass: string
+}
+
+const CardCase = (props:cardcaseProps) => {
     const { cardWrapperClass="" } = props
     return (
         <article className={`${cardCaseStyle.card} ${cardWrapperClass}`}>
