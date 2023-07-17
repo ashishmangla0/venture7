@@ -1,6 +1,7 @@
 $primary : #035c56;
 $secondary: #f5ce19;
 $neutral-white : #FFFFFF;
+$neutral-gray: #F7F7F7;
 $neutral-black : #000000;
 $text: #1b1b20;
 $base: 1rem;
@@ -32,6 +33,7 @@ $brandColors:(
     "primary": $primary,
     "secondary": $secondary,
     "neutral-white" : $neutral-white,
+    "neutral-gray" : $neutral-gray,
     "neutral-black" : $neutral-black
 );
 

@@ -1,6 +1,5 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 import CardCase from '@/components/cardcase/CardCase'
+import styles from './page.module.css'
 
 export default function Home() {
   return (
