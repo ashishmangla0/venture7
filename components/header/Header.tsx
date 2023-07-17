@@ -9,7 +9,7 @@ const Header = () => {
             </Link>
 
 
-            {process.env.IMG_HOST}
+          
         </nav>
     )
 }

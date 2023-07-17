@@ -24,7 +24,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">
           {children}
-          {process.env.API_URL}
+         
         </main>
        <Footer/>
       </body>
