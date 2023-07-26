@@ -1,3 +1,4 @@
+import { type } from "os";
 
 
 type CardCaseProps = {
@@ -20,7 +21,7 @@ type CardCaseProps = {
   };
 
 
-  interface FooterItemProps  {
+  type FooterItemProps = {
     title ?: string,
     submenu? : FooterSubMenuItemProps[]
     

@@ -156,22 +156,22 @@ const footerList = [
 const FooterItem: React.FC<FooterItemProps> = (props) => {
     const { title, submenu } = props;
     return (
-      <div>
-        <h6 className={footerStyle.footer_item_title}>
-          {title}
-        </h6>
-  
-        <ul>
-          {submenu?.map((menu: FooterSubMenuItemProps, index: number) => (
-             // Specify the type for 'menu' and 'index'
-            <li key={index}>
-              <Link href={menu.link}>{menu.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div>
+            <h6 className={footerStyle.footer_item_title}>
+                {title}
+            </h6>
+
+            <ul>
+                {submenu?.map((menu: FooterSubMenuItemProps, index: number) => (
+                    // Specify the type for 'menu' and 'index'
+                    <li key={index}>
+                        <Link href={menu.link}>{menu.title}</Link>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
-  };
+};
 
 const Footer = () => {
     return (
@@ -179,8 +179,8 @@ const Footer = () => {
             <div className="container">
                 <div>
                     {footerList?.map((item) => <><li>{item?.title}
-                    
-                    <FooterItem title={item?.title} submenu={item?.menulinks}/>
+
+                        <FooterItem title={item?.title} submenu={item?.menulinks} />
                     </li></>)}
                 </div>
                 <div className={footerStyle.footer_submenu}>
@@ -188,7 +188,7 @@ const Footer = () => {
                 </div>
                 <div className={footerStyle.footer_copyright}>{year}</div>
             </div>
-          
+
 
 
 
