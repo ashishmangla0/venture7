@@ -1,8 +1,27 @@
-.root{
+@import '@/styles/utilsplaceholder';
+
+.root {
     background: var(--venture-neutral-white);
     box-shadow: var(--venture-shadow2);
+
+    &_container {
+        @extend %d-flex-jcac;
+    }
+
+    &_navlist {
+        @extend %d-flex-jcac;
+        @extend %listnpm;
+    }
+    &_navitem{
+        :not(last-child){
+            margin-right: 1rem;
+        }
+    }
 }
-.logo{
+
+
+
+.logo {
     // width: 150px;
     // height: 47px;
     //  position: relative;

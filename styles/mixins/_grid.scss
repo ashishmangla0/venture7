@@ -22,3 +22,9 @@
     padding-left: calc(var(--#{$prefix}gutter-x) * .5); // stylelint-disable-line function-disallowed-list
     margin-top: var(--#{$prefix}gutter-y);
   }
+
+
+
+  @mixin make-grid($size: false,$gutter: $grid-gutter-width) {
+        grid-template-columns: repeat($size,minmax(0,1fr));
+  }

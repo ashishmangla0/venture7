@@ -7,6 +7,49 @@
   }
 
 
+  @mixin make-grid-columns($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+        $infix: breakpoint-infix($breakpoint, $breakpoints);
+        @include media-breakpoint-up($breakpoint, $breakpoints) {
+            @for $i from 1 through $columns {
+                .grid#{$infix}-#{$i} {
+                  @include make-grid($i);
+
+                }
+              }
+        }
+    }
+    
+  }
+  @mixin make-cssgrid($columns: $grid-columns, $breakpoints: $grid-breakpoints) {
+    @each $breakpoint in map-keys($breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $breakpoints);
+  
+      @include media-breakpoint-up($breakpoint, $breakpoints) {
+        @if $columns > 0 {
+          @for $i from 1 through $columns {
+            .col-span#{$infix}-#{$i} {
+              grid-column: auto / span $i;
+            }
+          }
+  
+          // Start with `1` because `0` is and invalid value.
+          // Ends with `$columns - 1` because offsetting by the width of an entire row isn't possible.
+        //   @for $i from 1 through ($columns - 1) {
+        //     .g-start#{$infix}-#{$i} {
+        //       grid-column-start: $i;
+        //     }
+        //   }
+        }
+      }
+    }
+  }
+
+  @include make-grid-columns();
+  @include make-cssgrid();
+
+  $gutter: $grid-gutter-width;
 .grid{
     display: grid;
+    column-gap:$gutter ;
 }

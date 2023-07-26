@@ -172,21 +172,30 @@ const Footer = () => {
     return (
         <footer className={footerStyle.footer}>
             <div className="container">
-                <div className="row">
-                    zx z
-                </div>
-                <div className="grid">
-                    as dasda 
-
-                    <div>
-                        sf sdf
+               
+                <div className="grid grid-1 grid-md-12">
+                    <div className="col-span-md-4 col-span-lg-3">
+asdasds
                     </div>
+                    <div className="col-span-md-8 col-span-lg-9">
+                        <div className="grid grid-sm-12">
+                        {
+                    footerList?.map((item,index) =>
+                        <FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={`${index+1 === footerList.length ? ' col-span-12': ' col-span-12 col-span-sm-4'}`} listClassName={`${index+1 === footerList.length ? `grid ${footerStyle.footer_list_last} grid-1 grid-sm-2 grid-xl-3` : 'sadsa'   }`} /> )
+                        }
+                        </div>
+                       
+                        
+                   
+                    </div>
+
+                   
+
+                   
                 </div>
                 <div>
                    
-                    {
-                    footerList?.map((item,index) =>
-                        <FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={` ${index+1 === footerList.length ? 'col-md-12': 'col-md-3'}`} listClassName={`${index+1 === footerList.length ? `grid ${footerStyle.footer_list_last}` : 'sadsa'   }`} /> )}
+                  
                 </div>
                 <div className={footerStyle.footer_submenu}>a dsd a</div>
 
