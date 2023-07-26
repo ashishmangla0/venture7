@@ -3,6 +3,7 @@ import footerStyle from './footer.module.scss';
 import { year } from '@/utils/date';
 import Link from "next/link";
 import { FooterItemProps, FooterSubMenuItemProps } from "@/types";
+import { Fragment } from "react";
 
 
 const footerList = [
@@ -151,7 +152,7 @@ const footerList = [
 
 
 const FooterItem: React.FC<FooterItemProps> = (props) => {
-    const { title, submenu,wrapperClasses,listClassName } = props;
+    const { title, submenu, wrapperClasses, listClassName } = props;
     return (
         <div className={wrapperClasses}>
             <h6 className={footerStyle.footer_item_title}>
@@ -172,30 +173,30 @@ const Footer = () => {
     return (
         <footer className={footerStyle.footer}>
             <div className="container">
-               
+
                 <div className="grid grid-1 grid-md-12">
                     <div className="col-span-md-4 col-span-lg-3">
-asdasds
+                        asdasds
                     </div>
                     <div className="col-span-md-8 col-span-lg-9">
                         <div className="grid grid-sm-12">
-                        {
-                    footerList?.map((item,index) =>
-                        <FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={`${index+1 === footerList.length ? ' col-span-12': ' col-span-12 col-span-sm-4'}`} listClassName={`${index+1 === footerList.length ? `grid ${footerStyle.footer_list_last} grid-1 grid-sm-2 grid-xl-3` : 'sadsa'   }`} /> )
-                        }
+                            {
+                                footerList?.map((item, index) =>
+                                    <Fragment key={index}><FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={`${index + 1 === footerList.length ? ' col-span-12' : ' col-span-12 col-span-sm-4'}`} listClassName={`${index + 1 === footerList.length ? `grid ${footerStyle.footer_list_last} grid-1 grid-sm-2 grid-xl-3` : 'sadsa'}`} /></Fragment>)
+                            }
                         </div>
-                       
-                        
-                   
+
+
+
                     </div>
 
-                   
 
-                   
+
+
                 </div>
                 <div>
-                   
-                  
+
+
                 </div>
                 <div className={footerStyle.footer_submenu}>a dsd a</div>
 
