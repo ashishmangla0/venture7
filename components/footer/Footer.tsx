@@ -2,8 +2,8 @@ import Image from "next/image"
 import footerStyle from './footer.module.scss';
 import { year } from '@/utils/date';
 import Link from "next/link";
+import { FooterItemProps, FooterSubMenuItemProps } from "@/types";
 
-import {FooterItemProps,FooterSubMenuItemProps } from "@/types";
 
 const footerList = [
     {

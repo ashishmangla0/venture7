@@ -16,12 +16,13 @@ type CardCaseProps = {
 
   type FooterSubMenuItemProps = {
     title ?: string;
-    link ?: string;
+    link : string;
   };
 
-  type FooterItemProps = {
+
+  interface FooterItemProps  {
     title ?: string,
-    submenu? : FooterSubMenuItemProps | FooterSubMenuItemProps[]
+    submenu? : FooterSubMenuItemProps[]
     
   };
   
