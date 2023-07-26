@@ -1,13 +1,16 @@
 $primary : #035c56;
 $secondary: #f5ce19;
 $neutral-white : #FFFFFF;
-$neutral-gray: #F7F7F7;
+$neutral-gray-150: #F7F7F7;
+$neutral-gray-200 : #E5E5E5;
 $neutral-gray-250 : #D6D6D6;
+$neutral-gray-700 : #494949;
 $neutral-black : #000000;
 $text: #1b1b20;
 $base: 1rem;
 
-
+$variable-prefix:             v7- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
+$prefix:                      $variable-prefix !default;
 
 
 $fw-100 : 100;
@@ -36,8 +39,10 @@ $brandColors:(
     "primary": $primary,
     "secondary": $secondary,
     "neutral-white" : $neutral-white,
-    "neutral-gray" : $neutral-gray,
+    "neutral-gray-150" : $neutral-gray-150,
+    "neutral-gray-200" : $neutral-gray-200,
     "neutral-gray-250" : $neutral-gray-250,
+    "neutral-gray-700" : $neutral-gray-700,
     "neutral-black" : $neutral-black
 );
 
@@ -53,5 +58,31 @@ $fontWeights:(
     "800": $fw-800,
     "900": $fw-900,
 
-)
+);
 
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width !default;
