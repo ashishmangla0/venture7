@@ -182,7 +182,7 @@ const Footer = () => {
                         <div className="grid grid-sm-12">
                             {
                                 footerList?.map((item, index) =>
-                                    <Fragment key={index}><FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={`${index + 1 === footerList.length ? ' col-span-12' : ' col-span-12 col-span-sm-4'}`} listClassName={`${index + 1 === footerList.length ? `grid ${footerStyle.footer_list_last} grid-1 grid-sm-2 grid-xl-3` : 'sadsa'}`} /></Fragment>)
+                                    <Fragment key={item?.title}><FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={`${index + 1 === footerList.length ? ' col-span-12' : ' col-span-12 col-span-sm-4'}`} listClassName={`${index + 1 === footerList.length ? `grid ${footerStyle.footer_list_last} grid-1 grid-sm-2 grid-xl-3` : 'sadsa'}`} /></Fragment>)
                             }
                         </div>
 
