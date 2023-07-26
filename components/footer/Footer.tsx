@@ -18,7 +18,7 @@ const footerList = [
                 link: '/quality-engineering/'
             },
             {
-                title: "Quality Engineering Services",
+                title: "Data Engineering Services",
                 link: '/data-engineering/'
             },
             {
