@@ -1,3 +1,17 @@
 .footer{
     background: var(--venture-neutral-gray);
+
+    &_copyright{
+        padding: 1rem 0;
+        text-align: center;
+    }
+    &_submenu{
+        border: 1px solid var(--venture-neutral-gray-250);
+    }
+    &_item{
+        &_title{
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+    }
 }
