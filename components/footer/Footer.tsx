@@ -11,19 +11,19 @@ const footerList = [
         menulinks: [
             {
                 title: "Product Engineering Services",
-                link: 'product-engineering'
+                link: '/product-engineering/'
             },
             {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
+                title: "Quality Engineering Services",
+                link: '/quality-engineering/'
             },
             {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
+                title: "Quality Engineering Services",
+                link: '/data-engineering/'
             },
             {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
+                title: "Future of Work",
+                link: '/future-of-work/'
             },
         ]
 
@@ -32,21 +32,18 @@ const footerList = [
         title: 'solutions',
         menulinks: [
             {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
+                title: "VReli® Product Suite",
+                link: 'https://vreli.com/'
             },
             {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
+                title: "Venture7® Bots",
+                link: '/chatbot/'
             },
             {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
+                title: "Automation Framework",
+                link: '/automated-functional-testing/'
             },
-            {
-                title: "Product Engineering Services",
-                link: 'product-engineering'
-            },
+
         ]
 
     },
@@ -62,7 +59,7 @@ const footerList = [
                 link: '/casestudy/'
             },
             {
-                title: "Business Vertical",
+                title: "Venture7® Research",
                 link: '/venture7-research/'
             },
             {
@@ -85,67 +82,67 @@ const footerList = [
         menulinks: [
             {
                 title: "PHP Laravel Applications",
-                link: 'product-engineering'
+                link: '/SaaS-apps-using-laravel/'
             },
             {
                 title: "Tableau for BI & Reporting",
-                link: 'product-engineering'
+                link: '/tableau-for-bi-and-reporting/'
             },
             {
                 title: "Mobile App Automation",
-                link: 'product-engineering'
+                link: '/mobile-application-automation/'
             },
             {
                 title: "React Native Mobile Apps",
-                link: 'product-engineering'
+                link: '/react-native-mobile-apps/'
             },
             {
                 title: "Power BI Analytics",
-                link: 'product-engineering'
+                link: '/power-bi/'
             },
             {
                 title: "API Testing",
-                link: 'product-engineering'
+                link: '/api-testing/'
             },
             {
                 title: "Dialogflow",
-                link: 'product-engineering'
+                link: '/dialogflow/'
             },
             {
                 title: "SSIS for ETL & DWH ",
-                link: 'product-engineering'
+                link: '/ssis/'
             },
             {
                 title: "Security Testing",
-                link: 'product-engineering'
+                link: '/security-testing/'
             },
             {
                 title: "Microsoft Bot Framework",
-                link: 'product-engineering'
+                link: '/microsoft-bot-framework/'
             },
             {
                 title: "DevOps for Quality",
-                link: 'product-engineering'
+                link: '"/devops/'
             },
             {
                 title: "JMeter Performance Testing",
-                link: 'product-engineering'
+                link: '/jmeter-performance-testing/'
             },
             {
                 title: "Salesforce",
-                link: 'product-engineering'
+                link: '/salesforce/'
             },
             {
                 title: "RPA - UiPath",
-                link: 'product-engineering'
+                link: '/uipath/'
             },
             {
                 title: "Cloud & Devops",
-                link: 'product-engineering'
+                link: '/cloud-devops/'
             },
             {
                 title: "Digital Transformation ",
-                link: 'product-engineering'
+                link: '/digital-tranformation/'
             },
         ]
 
@@ -154,17 +151,15 @@ const footerList = [
 
 
 const FooterItem: React.FC<FooterItemProps> = (props) => {
-    const { title, submenu } = props;
+    const { title, submenu,wrapperClasses,listClassName } = props;
     return (
-        <div>
+        <div className={wrapperClasses}>
             <h6 className={footerStyle.footer_item_title}>
                 {title}
             </h6>
-
-            <ul>
-                {submenu?.map((menu: FooterSubMenuItemProps, index: number) => (
-                    // Specify the type for 'menu' and 'index'
-                    <li key={index}>
+            <ul className={listClassName}>
+                {submenu?.map((menu: FooterSubMenuItemProps) => (
+                    <li key={menu.title}>
                         <Link href={menu.link}>{menu.title}</Link>
                     </li>
                 ))}
@@ -177,16 +172,28 @@ const Footer = () => {
     return (
         <footer className={footerStyle.footer}>
             <div className="container">
-                <div>
-                    {footerList?.map((item) => <><li>{item?.title}
+                <div className="row">
+                    zx z
+                </div>
+                <div className="grid">
+                    as dasda 
 
-                        <FooterItem title={item?.title} submenu={item?.menulinks} />
-                    </li></>)}
+                    <div>
+                        sf sdf
+                    </div>
                 </div>
-                <div className={footerStyle.footer_submenu}>
-                    a dsad
+                <div>
+                   
+                    {
+                    footerList?.map((item,index) =>
+                        <FooterItem title={item?.title} submenu={item?.menulinks} wrapperClasses={` ${index+1 === footerList.length ? 'col-md-12': 'col-md-3'}`} listClassName={`${index+1 === footerList.length ? `grid ${footerStyle.footer_list_last}` : 'sadsa'   }`} /> )}
                 </div>
-                <div className={footerStyle.footer_copyright}>{year}</div>
+                <div className={footerStyle.footer_submenu}>a dsd a</div>
+
+                <div className={footerStyle.footer_copyright}>
+
+                    © {year} Venture7® Technology Pvt Ltd. All Rights Reserved.
+                </div>
             </div>
 
 
