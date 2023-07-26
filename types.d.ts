@@ -13,5 +13,16 @@ type CardCaseProps = {
     content : string
     customClass ?: string
   };
+
+  type FooterSubMenuItemProps = {
+    title ?: string;
+    link ?: string;
+  };
+
+  type FooterItemProps = {
+    title ?: string,
+    submenu? : FooterSubMenuItemProps | FooterSubMenuItemProps[]
+    
+  };
   
-  export {CardCaseProps,LogoProps,SkipToMainProps};
+  export {CardCaseProps,LogoProps,SkipToMainProps,FooterItemProps,FooterSubMenuItemProps};
