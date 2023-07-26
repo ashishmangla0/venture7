@@ -23,7 +23,9 @@ type CardCaseProps = {
 
   type FooterItemProps = {
     title ?: string,
-    submenu? : FooterSubMenuItemProps[]
+    submenu ?: FooterSubMenuItemProps[],
+    wrapperClasses ?: string,
+    listClassName ?: string
     
   };
   
