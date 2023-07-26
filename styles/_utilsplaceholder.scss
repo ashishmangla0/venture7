@@ -1,0 +1,22 @@
+%d-flex{
+    display: flex;
+}
+
+%a-center {
+    align-items: center
+}
+%jcsb{
+    justify-content: space-between
+}
+%d-flex-jcac{
+    @extend %d-flex;
+    @extend %jcsb;
+   @extend %a-center
+}
+
+
+%listnpm{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
