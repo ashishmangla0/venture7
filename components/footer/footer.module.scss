@@ -2,6 +2,7 @@
 
 .footer {
     background: var(--venture-neutral-gray-150);
+    padding: 4.5rem 0 1rem 0;
 
     &_copyright {
         padding: 1rem 0;
@@ -26,7 +27,6 @@
     }
 
     &_list {
-
         &_last {
             @extend %listnpm;
 
@@ -38,13 +38,48 @@
         }
     }
 
+    &_social {
+        &_item {
+            width: 1.875rem;
+            height: 1.875rem;
+            @extend %d-inlineflex;
+            @extend %a-center;
+            border: 1px solid;
+            justify-content: center;
+
+            img {
+                width: 0.875rem;
+                height: 0.875rem;
+            }
+        }
+    }
+
 
     a {
         color: var(--venture-body-color);
     }
 
+    hr {
+        margin: 1.25rem 0
+    }
+
     ul {
         @extend %listnpm;
+    }
+
+    &_certificates,
+    &_flag,
+    &_social_wrap {
+        @extend %d-flex;
+    }
+
+    &_certificates,
+    &_flag {
+        gap: 0.75rem;
+    }
+
+    &_social_wrap {
+        gap: 1.25rem;
     }
 
 }

@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import headerStyle from './header.module.scss';
 import Logo from '../logo/Logo';
-//import { ReactComponent as DropDown } from '@/resources/images/dropdown.svg';
 
 const headerLinks = [
     {
