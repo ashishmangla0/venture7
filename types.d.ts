@@ -28,5 +28,15 @@ type CardCaseProps = {
     listClassName ?: string
     
   };
+
+
+  type SocialProps = {
+    title ?: string,
+    titleClass ?: string, 
+    linkClass ?: string,
+    linkWrapper ?: string
+   
+    
+  };
   
-  export {CardCaseProps,LogoProps,SkipToMainProps,FooterItemProps,FooterSubMenuItemProps};
+  export { CardCaseProps, LogoProps, SkipToMainProps, FooterItemProps, FooterSubMenuItemProps, type SocialProps };
