@@ -39,7 +39,7 @@ const SocialMedia = (props:SocialProps) => {
                 {title}
             </h6>}
             <div className={linkWrapper}>
-                {socialLinks?.map((link) => <Link href={link?.link} className={linkClass}>
+                {socialLinks?.map((link) => <Link href={link?.link} className={linkClass} key={link.title}>
                     <Image src={`${process.env.IMG_HOST}${link?.url}`} alt="" width={14} height={14} />
                 </Link>)}
             </div>
