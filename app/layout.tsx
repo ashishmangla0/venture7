@@ -10,6 +10,12 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Venture7® | AI Powered Technology Solutions Company',
   description: 'Venture7® is leading AI powered technology solutions company providing Product Engineering Services globally. Connect with us for Agile Software Development, Test Automation, Data Analytics and Chatbots.',
+  manifest: '/manifest.json',
+  themeColor: '#035c56',
+  icons: [
+    { rel: "icon", url: "/icons/128x128.png",sizes:'128x128'}, 
+    // { rel: "apple-touch-icon", url: "https://example.com/apple-icon.png" }
+  ]
 }
 
 export default function RootLayout({
