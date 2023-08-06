@@ -37,4 +37,9 @@ const Input = (props: InputProps) => {
 
 }
 
+Input.defaultProps = {
+   type: "text"
+  }
+
+
 export default Input
