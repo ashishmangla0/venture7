@@ -13,8 +13,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   themeColor: '#035c56',
   icons: [
-    { rel: "icon", url: "/icons/128x128.png",sizes:'128x128'}, 
-    // { rel: "apple-touch-icon", url: "https://example.com/apple-icon.png" }
+    { rel: "icon", url: "/icons/128x128.png",sizes:'128x128'}
   ]
 }
 
