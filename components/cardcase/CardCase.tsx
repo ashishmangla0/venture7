@@ -13,7 +13,7 @@ const CardCase = (props: CardCaseProps) => {
             <div className={`${cardCaseStyle.card__img}`}>
                 <Image
                     alt={title || ''}
-                    src={imageSrc || ''}
+                    src={imageSrc || '/case-1.jpg'}
                     layout='fill'
                     objectFit='cover'
                 />
