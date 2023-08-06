@@ -83,7 +83,7 @@ const SubscribeForm = () =>{
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Input label="First Name" register={register} required />
+      <Input label="First Name" register={register} required type={"number"} />
       <Select label="Age" {...register("Age")} />
       <input type="submit" />
     </form>
