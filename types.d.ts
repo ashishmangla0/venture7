@@ -42,7 +42,7 @@ type SocialProps = {
 
 
 type InputProps = {
-  type: 'text' | 'number' | 'email' | 'password' | 'submit',
+  type: 'text' | 'number' | 'email' | 'password' | 'submit' | 'tel',
   placeholder ?: string,
   inputClass ?: string,
   value ?: string | number,

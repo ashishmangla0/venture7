@@ -33,11 +33,22 @@ const SubscribeForm = () =>{
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <Input label="First Name" register={register} type="text" />
+    <section>
+      <div className="container">
+      <form onSubmit={handleSubmit(onSubmit)}>
+      <Input label="Your Email" register={register} type="email" />
+      <Input label="Your Number" register={register} type="tel" />
       {/* <Select label="Age" {...register("Age")} /> */}
       <input type="submit" />
     </form>
+      </div>
+
+
+
+    </section>
+
+
+
   );
 };
 export default SubscribeForm
