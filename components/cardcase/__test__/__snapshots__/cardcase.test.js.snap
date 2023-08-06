@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardCase/> renders CardCase Snapshot 1`] = `
+<div>
+  <article
+    class="card "
+  >
+    <div
+      class="card__img"
+    >
+      <img
+        alt=""
+        data-nimg="fill"
+        decoding="async"
+        src=""
+        style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
+      />
+    </div>
+    <div
+      class="card__content"
+    >
+      <a
+        class="button"
+        href="/"
+      >
+        Read More
+      </a>
+    </div>
+  </article>
+</div>
+`;

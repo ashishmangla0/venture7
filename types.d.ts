@@ -1,42 +1,66 @@
 import { type } from "os";
-
+import { Path, useForm, UseFormRegister, SubmitHandler } from "react-hook-form";
 
 type CardCaseProps = {
-    cardWrapperClass ?: string;
-  };
-  type LogoProps = {
-    logoClass ?: string,
-    height ?: number, 
-    width ?: number
-  };
-  type SkipToMainProps = {
-    sectionId : string,
-    content : string
-    customClass ?: string
-  };
+  cardWrapperClass?: string;
+  title ?: string,
+  description ?: string | string[],
+  imageSrc ?: string,
+  readMoreLink ?: string,
+  linkText ?: string
+};
+type LogoProps = {
+  logoClass?: string,
+  height?: number,
+  width?: number
+};
+type SkipToMainProps = {
+  sectionId: string,
+  content: string
+  customClass?: string
+};
 
-  type FooterSubMenuItemProps = {
-    title ?: string;
-    link : string;
-  };
+type FooterSubMenuItemProps = {
+  title?: string;
+  link: string;
+};
+
+type FooterItemProps = {
+  title?: string,
+  submenu?: FooterSubMenuItemProps[],
+  wrapperClasses?: string,
+  listClassName?: string
+
+};
+
+type SocialProps = {
+  title?: string,
+  titleClass?: string,
+  linkClass?: string,
+  linkWrapper?: string
+};
 
 
-  type FooterItemProps = {
-    title ?: string,
-    submenu ?: FooterSubMenuItemProps[],
-    wrapperClasses ?: string,
-    listClassName ?: string
-    
-  };
+type InputProps = {
+  type: 'text' | 'number' | 'email' | 'password' | 'submit',
+  placeholder ?: string,
+  inputClass ?: string,
+  value ?: string | number,
+  name ?: string,
+  disabled ?: boolean,
+  onChange ?: (e: ChangeEvent<HTMLInputElement>) => void,
+  label ?: string,
+  id ?: string,
+  required ?: boolean,
+  register: UseFormRegister;
+}
 
-
-  type SocialProps = {
-    title ?: string,
-    titleClass ?: string, 
-    linkClass ?: string,
-    linkWrapper ?: string
-   
-    
-  };
-  
-  export { CardCaseProps, LogoProps, SkipToMainProps, FooterItemProps, FooterSubMenuItemProps, type SocialProps };
+export { 
+    CardCaseProps, 
+    LogoProps, 
+    SkipToMainProps, 
+    FooterItemProps, 
+    FooterSubMenuItemProps, 
+    SocialProps,
+    InputProps
+   };

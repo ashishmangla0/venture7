@@ -6,7 +6,6 @@ import { FooterItemProps, FooterSubMenuItemProps } from "@/types";
 import { Fragment } from "react";
 import SocialMedia from "../socialmedia/SocialMedia";
 
-
 const footerList = [
     {
         title: 'services',

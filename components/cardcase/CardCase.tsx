@@ -4,34 +4,38 @@ import Image from 'next/image'
 import cardCaseStyle from './cardcase.module.scss'
 
 import { CardCaseProps } from '@/types'
+import Link from 'next/link'
 
-const CardCase = (props:CardCaseProps) => {
-    const { cardWrapperClass } = props
+const CardCase = (props: CardCaseProps) => {
+    const { cardWrapperClass, title, description,imageSrc,readMoreLink,linkText } = props
     return (
         <article className={`${cardCaseStyle.card} ${cardWrapperClass}`}>
             <div className={`${cardCaseStyle.card__img}`}>
                 <Image
-                    alt='Mountains'
-                    src='/case-1.jpg'
+                    alt={title || ''}
+                    src={imageSrc || ''}
                     layout='fill'
                     objectFit='cover'
                 />
             </div>
             <div className={`${cardCaseStyle.card__content}`}>
-                        <h3>
-                            as dfsda sdfasdf sdfasd fsd sdfs<br/>
-                        </h3>
-                        <p>
-                        If you are looking for a random city or town name to spark a location for a book, game, or a script millions.
-                        </p>
-                        <a href="" className='button'>Read More</a>
+                {title && <h3>
+                    {title}
+                </h3>}
+                {description && <p>
+                    {description}
+                </p>}
+                {readMoreLink && <Link className='button' href={readMoreLink} >{linkText}</Link> }
             </div>
-
-           
         </article>
     )
 }
 CardCase.defaultProps = {
-    cardWrapperClass: ''
+    cardWrapperClass: '',
+    title: '',
+    description: '',
+    imageSrc:'',
+    readMoreLink:'/',
+    linkText: 'Read More'
 }
 export default CardCase
