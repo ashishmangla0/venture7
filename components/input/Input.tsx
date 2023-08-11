@@ -1,6 +1,5 @@
 import { InputProps } from "@/types";
 import inputStyle from './input.module.scss';
-import { Path, useForm, UseFormRegister, SubmitHandler } from "react-hook-form";
 
 const Input = (props: InputProps) => {
     const {
@@ -16,12 +15,13 @@ const Input = (props: InputProps) => {
         register,
         required,
         ariaInvalid,
+        lableClass,
         ...resProps
     } = props;
 
     return (
-        <>
-            {label && <label htmlFor={id} className="">{label}</label>}
+        <div>
+            {label && <label htmlFor={id} className={`${inputStyle.label} ${lableClass}`}>{label}</label>}
             <input
                 aria-invalid={ariaInvalid}
                 id={id}
@@ -36,7 +36,7 @@ const Input = (props: InputProps) => {
                 {...resProps}
 
             />
-        </>
+        </div>
     )
 
 }
