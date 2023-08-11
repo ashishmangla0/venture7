@@ -42,7 +42,7 @@ type SocialProps = {
 
 
 type InputProps = {
-  type: 'text' | 'number' | 'email' | 'password' | 'submit' | 'tel',
+  type ?: 'text' | 'number' | 'email' | 'password' | 'submit' | 'tel',
   placeholder ?: string,
   inputClass ?: string,
   value ?: string | number,
@@ -52,7 +52,7 @@ type InputProps = {
   label ?: string,
   id ?: string,
   required ?: boolean,
-  register: UseFormRegister;
+  register ?: UseFormRegister;
 }
 
 export { 
