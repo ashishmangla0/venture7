@@ -13,15 +13,17 @@ const Input = (props: InputProps) => {
         onChange,
         label,
         id,
-       register,
-       required,
-       ...resProps
+        register,
+        required,
+        ariaInvalid,
+        ...resProps
     } = props;
 
     return (
         <>
-            {label && <label htmlFor={id}>{label}</label>}
+            {label && <label htmlFor={id} className="">{label}</label>}
             <input
+                aria-invalid={ariaInvalid}
                 id={id}
                 type={type}
                 className={`${inputStyle.input} ${inputClass}`}
@@ -32,8 +34,8 @@ const Input = (props: InputProps) => {
                 onChange={onChange}
                 {...register}
                 {...resProps}
-                
-                 />
+
+            />
         </>
     )
 

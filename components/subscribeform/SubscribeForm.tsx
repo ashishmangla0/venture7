@@ -17,11 +17,19 @@ export default function SubscribeForm() {
 
       <Input
       id="yourEmail"
-      type={"email"}
+      type={"text"}
        label="Your Email"
-       register={register('yourEmail',{ required: "Username is required",pattern: /^\S+@\S+$/i })}
+       ariaInvalid={errors?.yourEmail ? true: false}
+       register={register('yourEmail',{ 
+        required: "Username is required", 
+        pattern: {
+        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        message: "Invalid email address",
+      }, })}
+      
        />
-      {errors?.yourEmail && "First name is required"}
+      {errors.yourEmail && <p>{errors.yourEmail.message}</p>}
+
       <Input 
         id="lastname"
         type={"text"} 

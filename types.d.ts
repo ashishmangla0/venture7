@@ -53,6 +53,7 @@ type InputProps = {
   id ?: string,
   required ?: boolean,
   register ?: UseFormRegister;
+  ariaInvalid ?: boolean
 }
 
 export { 
