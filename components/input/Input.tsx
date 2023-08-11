@@ -43,6 +43,3 @@ const Input = (props: InputProps) => {
 
 export default Input
 
-function register(label: string | undefined, arg1: { required: boolean | undefined; }): import("react").JSX.IntrinsicAttributes & import("react").ClassAttributes<HTMLInputElement> & import("react").InputHTMLAttributes<HTMLInputElement> {
-    throw new Error("Function not implemented.");
-}

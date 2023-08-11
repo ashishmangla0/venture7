@@ -57,6 +57,13 @@ type InputProps = {
   lableClass ?: string
 }
 
+type ButtonProps = {
+  type ?: 'button' | 'submit' | 'reset'
+  children ?: string | React.ReactNode,
+  buttonClass ?: string,
+  handleOnClick ?: () => void
+}
+
 export { 
     CardCaseProps, 
     LogoProps, 
@@ -64,5 +71,6 @@ export {
     FooterItemProps, 
     FooterSubMenuItemProps, 
     SocialProps,
-    InputProps
+    InputProps,
+    ButtonProps
    };

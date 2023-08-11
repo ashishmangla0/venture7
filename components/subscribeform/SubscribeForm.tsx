@@ -1,6 +1,7 @@
 'use client'
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "../input/Input";
+import Button from "../button/Button";
 
 interface IFormInputs {
   yourEmail: string
@@ -42,6 +43,10 @@ export default function SubscribeForm() {
 
 
       <input type="submit" />
+      {/*  */}
+      <Button type="submit">
+        <h1>s dfsd</h1>
+      </Button>
     </form>
   );
 }
