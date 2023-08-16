@@ -64,6 +64,17 @@ type ButtonProps = {
   handleOnClick ?: () => void
 }
 
+type CheckboxProps = {
+  id ?: string,
+  value ?: string,
+  children ?: string | React.ReactNode,
+  disabled ?: boolean,
+  label ?: string,
+  ariaLabel ?: string,
+  register ?: UseFormRegister;
+}
+
+
 export { 
     CardCaseProps, 
     LogoProps, 
@@ -72,5 +83,6 @@ export {
     FooterSubMenuItemProps, 
     SocialProps,
     InputProps,
-    ButtonProps
+    ButtonProps,
+    CheckboxProps
    };

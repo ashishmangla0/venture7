@@ -2,6 +2,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import Input from "../input/Input";
 import Button from "../button/Button";
+import Checkbox from "../checkbox/Checkbox";
 
 interface IFormInputs {
   yourEmail: string
@@ -40,7 +41,7 @@ export default function SubscribeForm() {
       {errors.lastName && "Last name is required"}
 
       {/* <input type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} /> */}
-
+<Checkbox label="subscribeValue"/>
 
       <input type="submit" />
       {/*  */}
