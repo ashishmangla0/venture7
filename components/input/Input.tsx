@@ -3,6 +3,7 @@ import inputStyle from './input.module.scss';
 
 const Input = (props: InputProps) => {
     const {
+        inputWrapperClasses,
         type,
         inputClass,
         placeholder,
@@ -20,7 +21,7 @@ const Input = (props: InputProps) => {
     } = props;
 
     return (
-        <div>
+        <div className={inputWrapperClasses}>
             {label && <label htmlFor={id} className={`${inputStyle.label} ${lableClass}`}>{label}</label>}
             <input
                 aria-invalid={ariaInvalid}
@@ -40,6 +41,11 @@ const Input = (props: InputProps) => {
     )
 
 }
+
+Input.defaultProps = {
+    inputWrapperClasses: "",
+    type: "text"
+  }
 
 export default Input
 
