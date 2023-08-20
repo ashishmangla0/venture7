@@ -1,0 +1,9 @@
+@import '@/styles/placeholders';
+.subscribeform{
+    &_wrap{
+        @extend %border-radius-20;
+        padding: 64px 50px;
+        background: var(--venture-primaryDark);
+        color: var(--venture-neutral-white);
+    }
+}
