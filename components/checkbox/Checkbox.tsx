@@ -1,6 +1,6 @@
 import { CheckboxProps } from '@/types'
 const Checkbox = (props: CheckboxProps) => {
-    const { label, id, value, children, disabled, ariaLabel, register, ...resProps } = props
+    const { label, id, value, disabled, ariaLabel, register, ...resProps } = props
     return (
         <div className="form-check form-check-inline">
             <input
@@ -13,7 +13,7 @@ const Checkbox = (props: CheckboxProps) => {
                 {...register}
                 {...resProps}
             />
-            {label && <label className="form-check-label" htmlFor={id}>{children}</label>}
+            {label && <label className="form-check-label" htmlFor={id}>{label}</label>}
         </div>
     )
 
