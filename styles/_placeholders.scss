@@ -8,6 +8,14 @@ $font-weight:(
     'semibold' : var(--font-weight-600)
 );
 
+$border-radiuses:(
+    '4' : var(--venture-radius-4),
+    '8' : var(--venture-radius-8),
+    '12' : var(--venture-radius-12),
+    '16' : var(--venture-radius-16),
+    '20' : var(--venture-radius-20),
+);
+
 $font-size:(
     'base' : var(--venture-body-font-size)
 );
@@ -22,11 +30,18 @@ $line-height:(
         font-weight:#{$value};
     }
 }
+@each $radius, $value in $border-radiuses{
+    %border-radius-#{$radius}{
+        border-radius:#{$value};
+    }
+}
+
 @each $font, $value in $font-size{
     %font-size-#{$font}{
         font-size:#{$value};
     }
 }
+
 
 
 @import './utilsplaceholder';

@@ -54,7 +54,8 @@ type InputProps = {
   required ?: boolean,
   register ?: UseFormRegister;
   ariaInvalid ?: boolean,
-  lableClass ?: string
+  lableClass ?: string,
+  inputWrapperClasses ?: string
 }
 
 type ButtonProps = {
@@ -67,9 +68,8 @@ type ButtonProps = {
 type CheckboxProps = {
   id ?: string,
   value ?: string,
-  children ?: string | React.ReactNode,
+label ?: string | React.ReactNode,
   disabled ?: boolean,
-  label ?: string,
   ariaLabel ?: string,
   register ?: UseFormRegister;
 }

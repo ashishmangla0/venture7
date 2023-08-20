@@ -8,6 +8,11 @@
     @each $shadow, $value in $shadows{
         --venture-#{$shadow}:#{$value};
     }
+    @each $radius, $value in $borderRadius{
+        --venture-radius-#{$radius}:#{$value};
+    }
+
+    
  
     --venture-body-color : #{$text};
     --venture-body-font-size : #{$base};
