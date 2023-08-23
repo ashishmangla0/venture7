@@ -1,5 +1,67 @@
+// scss-docs-start gradient-bg-mixin
+@function color-contrast($color){
+    $red: red( $color );
+    $green: green( $color );
+    $blue: blue( $color );
+    $l: 1 - ( 0.299 * $red + 0.587 * $green + 0.114 * $blue ) / 255;
+    @if ( $l < 0.41 ) {
+        // if the luminance is less than 0.5 return black
+        @return #000000; 
+      } @else {
+        // if the luminance is more than 0.5 return white
+        @return #ffffff; 
+      }
+}
+
+
+@mixin gradient-bg($color: null) {
+    background-color: $color;
+  
+    // @if $enable-gradients {
+    //   background-image: var(--#{$prefix}gradient);
+    // }
+  }
+@mixin button-variant(  $background, $border, $color: color-contrast($background),){
+    --#{$prefix}btn-color: #{$color};
+    --#{$prefix}btn-bg: #{$background};
+    --#{$prefix}btn-border-color: #{$border};
+
+}
+
+
+
 .button{
     @extend  %font-size-base;
     @extend %d-flex-jccac;
-    border:2px solid transparent;
+  
+    @include gradient-bg(var(--#{$prefix}btn-bg));
+    @extend %border-radius-8;
+    @extend %d-inlineflex;
+    @extend %a-center;
+    @extend %jcc;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    @extend %font-weight-medium;
+    color: var(--#{$prefix}btn-color);
+    border: var(--btn-border-width) solid var(--#{$prefix}btn-border-color);
+    height: 3rem;
+}
+
+
+@each $color, $value in $theme-colors {
+    .button-#{$color}{
+        
+
+
+        @if $color == "light" {
+            @include button-variant($value,$value)
+        }
+        @else if $color == "dark" {
+            @include button-variant($value,$value)
+        }
+        @else {
+@include button-variant($value,$value)
+        }
+    }
+
 }

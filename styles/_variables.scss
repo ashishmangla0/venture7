@@ -9,7 +9,8 @@ $neutral-gray-700 : #494949;
 $neutral-black : #000000;
 $text: #1b1b20;
 $base: 1rem;
-
+$black: #000 !default;
+$white: #fff !default;
 $variable-prefix: v7- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix: $variable-prefix !default;
 
@@ -47,6 +48,15 @@ $brandColors: (
   "neutral-gray-700" : $neutral-gray-700,
   "neutral-black" : $neutral-black
 );
+
+
+
+$theme-colors: (
+  "primary": $primary,
+  "primaryDark" : $primaryDark,
+  "secondary": $secondary,
+);
+
 
 
 $fontWeights: (
@@ -95,3 +105,21 @@ $grid-row-columns: 6 !default;
 // Container padding
 
 $container-padding-x: $grid-gutter-width !default;
+
+// Customize the light and dark text colors for use in our color contrast function.
+$color-contrast-dark: $black !default;
+$color-contrast-light: $white !default;
+
+
+$border-width: 2px !default;
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px) !default;
+
+$border-style: solid !default;
+
+
+$btn-border-width: $border-width !default;
